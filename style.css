@@ -94,41 +94,60 @@ nav ul li a {
     background-color: #388E3C;
 }
 
-/* Features Section */
-.features {
+/* Expertise Section */
+.expertise {
     padding: 60px 0;
     background-color: #f9f9f9;
 }
 
-.features h3 {
+.expertise h3 {
     text-align: center;
     font-size: 36px;
     margin-bottom: 40px;
     color: #333;
 }
 
-.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-}
-
-.feature-item {
-    background-color: white;
-    padding: 20px;
+.expertise-list {
+    list-style-type: none;
+    padding: 0;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
 }
 
-.feature-item h4 {
-    font-size: 24px;
-    margin-bottom: 15px;
+.expertise-list li {
+    display: inline-block;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.expertise-list li:hover {
     color: #4CAF50;
 }
 
-.feature-item p {
-    color: #666;
+/* Hide the details initially */
+.details {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+/* Display the details on hover */
+.expertise-list li:hover .details {
+    display: block;
+}
+
+.details li {
+    list-style-type: none;
+    margin: 5px 0;
 }
 
 footer {
