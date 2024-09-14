@@ -25,31 +25,67 @@ header {
 nav {
     background: #333;
     padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav h1 {
-    display: inline;
     color: white;
+    font-size: 1.8em;
 }
 
-nav ul {
+nav .nav-menu {
     list-style: none;
-    float: right;
+    display: flex;
 }
 
-nav ul li {
-    display: inline;
+nav .nav-menu li {
     margin-left: 20px;
 }
 
-nav ul li a {
+nav .nav-menu li a {
     color: white;
     text-decoration: none;
+    padding: 5px 10px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav .nav-menu li a:hover {
+    background: #555;
+    border-radius: 5px;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+}
+
+.login-button {
+    background: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: background 0.3s ease;
+}
+
+.login-button:hover {
+    background: #0056b3;
+}
+
+.hamburger-menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
 }
 
 /* Hero section styling */
 .hero {
-    background: url('hero-image.jpg') no-repeat center center/cover;
+    background: url('images/hero-image.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -92,27 +128,28 @@ main {
     padding: 20px 0;
 }
 
-.services, .about, .contact {
+.page-content {
     padding: 40px 0;
 }
 
-.services .service-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.page-content .container {
+    text-align: center;
 }
 
-.service-item {
-    background: #f4f4f4;
-    padding: 20px;
+.page-image {
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
-    width: 45%;
-    margin: 10px 0;
 }
 
-.about p {
-    max-width: 800px;
-    margin: 20px auto;
+h2 {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+p {
+    font-size: 1em;
+    margin: 10px 0;
 }
 
 /* Form styling */
@@ -153,4 +190,35 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #333;
+    }
+
+    nav .nav-menu.active {
+        display: flex;
+    }
+
+    nav .nav-menu li {
+        margin: 0;
+        border-bottom: 1px solid #444;
+    }
+
+    nav .nav-menu li a {
+        padding: 15px;
+        display: block;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
 }
