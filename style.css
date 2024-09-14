@@ -1,162 +1,133 @@
-/* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 20px;
-    position: absolute;
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
 }
 
 header h1 {
-    display: inline-block;
     margin: 0;
-    font-size: 24px;
 }
 
-nav ul {
+header nav ul {
     list-style: none;
-    float: right;
     margin: 0;
     padding: 0;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-/* Hero Section */
-.hero {
-    position: relative;
-    height: 100vh;
-    background-image: url('https://source.unsplash.com/1600x900/?technology');
-    background-size: cover;
-    background-position: center;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.6);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
-.hero h2 {
-    color: white;
-    font-size: 48px;
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.hero {
+    background: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.hero .cta-button {
+    background: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+section {
+    padding: 50px 20px;
+}
+
+section h2 {
+    margin-top: 0;
+}
+
+.service {
     margin-bottom: 20px;
 }
 
-.hero p {
-    color: #ddd;
-    font-size: 20px;
-    margin-bottom: 40px;
-}
-
-.cta {
-    padding: 15px 30px;
-    background-color: #4CAF50;
-    color: white;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-}
-
-.cta:hover {
-    background-color: #388E3C;
-}
-
-/* Expertise Section */
-.expertise {
-    padding: 60px 0;
-    background-color: #f9f9f9;
-}
-
-.expertise h3 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 40px;
-    color: #333;
-}
-
-.expertise-list {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-}
-
-.expertise-list li {
-    display: inline-block;
-    margin: 20px;
-    font-size: 20px;
-    font-weight: 600;
-    position: relative;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.expertise-list li:hover {
-    color: #4CAF50;
-}
-
-/* Hide the details initially */
-.details {
-    display: none;
-    position: absolute;
-    top: 40px;
-    left: 0;
-    background-color: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 100;
-}
-
-/* Display the details on hover */
-.expertise-list li:hover .details {
+form label {
     display: block;
+    margin-top: 10px;
 }
 
-.details li {
-    list-style-type: none;
-    margin: 5px 0;
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+form button {
+    background: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 footer {
-    padding: 20px;
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
     text-align: center;
-    background-color: #333;
-    color: white;
 }
 
-footer p {
-    margin: 0;
+@media (max-width: 768px) {
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #333;
+    }
+
+    header nav ul.show {
+        display: flex;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    .hero {
+        padding: 30px 20px;
+    }
 }

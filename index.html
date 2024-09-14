@@ -3,69 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Consulting Services</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Your Site Name</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>IT Consulting Services</h1>
+            <h1>Your Company</h1>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <button id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
         </div>
     </header>
-    
-    <section class="hero">
-        <div class="hero-overlay">
-            <div class="container">
-                <h2>Expert IT Solutions for Your Business</h2>
-                <p>Transform your business with our innovative IT consulting services, tailored to meet your unique needs.</p>
-                <a href="services.html" class="cta">Explore Services</a>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Welcome to Your Site</h2>
+            <p>Your tagline or mission statement goes here.</p>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Information about your company, vision, and values.</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service">
+                <h3>Service 1</h3>
+                <p>Description of service 1.</p>
+            </div>
+            <div class="service">
+                <h3>Service 2</h3>
+                <p>Description of service 2.</p>
             </div>
         </div>
     </section>
 
-    <!-- Expertise Section with Hover Functionality -->
-    <section class="expertise">
+    <section id="contact">
         <div class="container">
-            <h3>Our Core Expertise</h3>
-            <ul class="expertise-list">
-                <li>Cloud Computing
-                    <ul class="details">
-                        <li>Cloud Infrastructure</li>
-                        <li>SaaS Implementation</li>
-                        <li>Cloud Security</li>
-                    </ul>
-                </li>
-                <li>Cybersecurity
-                    <ul class="details">
-                        <li>Threat Detection</li>
-                        <li>Risk Management</li>
-                        <li>Security Audits</li>
-                    </ul>
-                </li>
-                <li>System Integration
-                    <ul class="details">
-                        <li>API Integrations</li>
-                        <li>Database Migrations</li>
-                        <li>Third-Party Systems</li>
-                    </ul>
-                </li>
-            </ul>
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 IT Consulting Services. All Rights Reserved.</p>
+            <p>&copy; 2024 Your Company. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
