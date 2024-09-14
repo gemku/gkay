@@ -10,6 +10,7 @@ body {
     line-height: 1.6;
 }
 
+/* Container styling for alignment */
 .container {
     width: 80%;
     margin: 0 auto;
@@ -97,6 +98,7 @@ main {
 
 .services .service-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
@@ -104,7 +106,8 @@ main {
     background: #f4f4f4;
     padding: 20px;
     border-radius: 10px;
-    width: 30%;
+    width: 45%;
+    margin: 10px 0;
 }
 
 .about p {
